@@ -1,0 +1,96 @@
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: repeating-linear-gradient(
+                to right,
+                red 0px,
+                red 100px,
+                white 100px,
+                white 200px
+            );
+            color: #000;
+            text-align: center;
+        }
+
+        header {
+            background-color: rgba(241, 7, 7, 0.979);
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+             margin: 20px 0 0 0;
+    }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+       
+        nav ul li a {
+            text-decoration: none;
+            color: #c00;
+            font-weight: bold;
+             transition: color 0.3s, text-shadow 0.3s;
+        }
+         nav ul li a:hover {
+      color: #ee0101;
+      text-shadow: 0 0 6px #f30404;
+    }
+        main {
+            padding: 50px 20px 100px;
+        }
+
+        .retangulo-central {
+      background-color: #ffffff;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px 20px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(190, 0, 0, 0.747);
+      text-align: center;
+    }
+
+    .retangulo-central h2 {
+      font-size: 32px;
+      color: #d00;
+    }
+
+    .botao {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #c00;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .botao:hover {
+      background-color: #e60101;
+      box-shadow: 0 0 10px #e60101;
+    }
+        footer {
+    background-color: rgba(255, 255, 255, 0.7); /* cor de fundo semitransparente */
+    padding: 5px;                             /* espaçamento interno  */
+    position: fixed;                           /* fixa o rodapé na tela */
+    width: 100%;                               /* ocupa toda a largura da janela */
+    bottom: 0;                                 /* fixa na parte de baixo da tela */
+    text-align: center;                        /* centraliza o texto */
+}
+         /* Responsivo */
+    @media (max-width: 600px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .retangulo-central {
+        margin: 30px 15px;
+        padding: 20px;
+      }
+    }
