@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sabores - Fruttydellys</title>
+  <link rel="stylesheet" href="stylesabores.css">
+</head>
+<body>
+  <header>
+    <img src="logosemfundo.png" alt="Frutydellys" style="height: 200px;">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="botao-inicio">Início</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Conheça nossos sabores incríveis!</h2>
+    <div class="container-cards">
+      <div class="card-sabor">
+        <h3>Morango</h3>
+        <div class="quantidade">
+          <button>-</button>
+          <span>0</span>
+          <button>+</button>
+        </div>
+      </div>
+      <div class="card-sabor">
+        <h3>Chocolate</h3>
+        <div class="quantidade">
+          <button>-</button>
+          <span>0</span>
+          <button>+</button>
+        </div>
+      </div>
+      <div class="card-sabor">
+        <h3>Baunilha</h3>
+        <div class="quantidade">
+          <button>-</button>
+          <span>0</span>
+          <button>+</button>
+        </div>
+      </div>
+      <div class="card-sabor">
+        <h3>Limão Siciliano</h3>
+        <div class="quantidade">
+          <button>-</button>
+          <span>0</span>
+          <button>+</button>
+        </div>
+      </div>
+      <div class="card-sabor">
+        <h3>Maracujá</h3>
+        <div class="quantidade">
+          <button>-</button>
+          <span>0</span>
+          <button>+</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="carrinho" onclick="enviarPedido()">Enviar Pedido via WhatsApp</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Frutydellys</p>
+  </footer>
+ 
+  <script>
+    // Botões + e -
+    document.querySelectorAll('.card-sabor').forEach(card => {
+      const menos = card.querySelector('button:first-child');
+      const mais = card.querySelector('button:last-child');
+      const valor = card.querySelector('span');
+
+      menos.addEventListener('click', () => {
+        let qtd = parseInt(valor.textContent);
+        if (qtd > 0) valor.textContent = qtd - 1;
+      });
+
+      mais.addEventListener('click', () => {
+        let qtd = parseInt(valor.textContent);
+        valor.textContent = qtd + 1;
+      });
+    });
+
+    // Função para enviar pedido no WhatsApp
+    function enviarPedido() {
+      let mensagem = 'Olá! Gostaria de fazer um pedido:\n';
+      document.querySelectorAll('.card-sabor').forEach(card => {
+        const sabor = card.querySelector('h3').textContent;
+        const qtd = parseInt(card.querySelector('span').textContent);
+        if (qtd > 0) {
+          mensagem += `• ${sabor}: ${qtd}\n`;
+        }
+      });
+
+      if (mensagem === 'Olá! Gostaria de fazer um pedido:\n') {
+        alert('Você precisa selecionar pelo menos um sabor antes de enviar.');
+        return;
+      }
+
+      const numeroWhatsApp = '5517981778223'; // << Substitua com o número da loja
+      const link = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+      window.open(link, '_blank');
+    }
+  </script>
+</body>
+</html>
