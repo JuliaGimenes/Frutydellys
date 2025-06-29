@@ -200,7 +200,7 @@ footer {
 }
 
 a {
-  color: #fff;
+  color: #d10000;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -248,7 +248,7 @@ main {
 .mobile-menu div {
   width: 32px;
   height: 2px;
-  background: #fff;
+  background: #d10000;
   margin: 8px;
   transition: 0.3s;
 }
