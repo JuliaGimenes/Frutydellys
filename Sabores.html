@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sabores - Fruttydellys</title>
   <link rel="stylesheet" href="stylesabores.css">
-
 </head>
 <body>
 
-<header>
-<a href="index.html">
+<header class="header">
+ <nav class="nav">
+<a href="index.html" class="logo">Frutydellys</a>
   <img src="logosemfundo.png" alt="Frutydellys" style="height: 200px;">
-  </a>
-  <nav>
+  <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">
+      ☰
+    </button>
+<div class="menu">
     <a href="#premium e Skimo">Picolé Premium e skimo</a>
     <a href="#leite">Picolé ao Leite</a>
     <a href="#fruta">Picolé de Fruta</a>
@@ -23,8 +25,9 @@
     <a href="#petit">Petit Gateau</a>
     <a href="#milkshake">Milk-Shake</a>
     <a href="#Copo Gourmet">Copo Gourmet</a>
-     <a href="#Taça Gourmet">Taça Gourmet</a>
-  </nav>
+    <a href="#Taça Gourmet">Taça Gourmet</a>
+</div>
+</nav>
 </header>
 <main>
   <h2>Conheça nossos sabores incríveis!</h2>
@@ -976,7 +979,6 @@
       <span>0</span>
       <button>+</button>
     </div>
-
   </section>
 
   <button class="carrinho" onclick="enviarPedido()">Enviar Pedido via WhatsApp</button>
@@ -987,6 +989,15 @@
 </footer>
 
 <script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    const button = document.querySelector('.hamburger');
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+    menu.classList.toggle('show');
+    button.setAttribute('aria-expanded', !isExpanded);
+  }
+
   // Função para os botões + e -
   document.querySelectorAll('.card-sabor').forEach(card => {
     const menos = card.querySelector('button:first-of-type');
