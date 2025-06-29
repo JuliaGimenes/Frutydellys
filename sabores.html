@@ -9,34 +9,28 @@
 <body>
 
 <header>
+<a href="index.html">
+  <img src="logosemfundo.png" alt="Frutydellys" style="height: 200px;">
+<button class="hamburger" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</button>
+</a>
   <nav>
-    <a href="index.html">
-      <img src="logosemfundo.png" alt="Frutydellys" style="height: 200px;">
-    </a>
-
-    <div class="mobile-menu" onclick="toggleMenu()">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-
-    <ul class="nav-list">
-      <li><a href="#premium e Skimo">Picolé Premium e Skimo</a></li>
-      <li><a href="#leite">Picolé ao Leite</a></li>
-      <li><a href="#fruta">Picolé de Fruta</a></li>
-      <li><a href="#zero">Zero Açúcar</a></li>
-      <li><a href="#paletas">Paletas</a></li>
-      <li><a href="#massa">Massa</a></li>
-      <li><a href="#petit">Petit Gateau</a></li>
-      <li><a href="#milkshake">Milk-Shake</a></li>
-      <li><a href="#Copo Gourmet">Copo Gourmet</a></li>
-      <li><a href="#Taça Gourmet">Taça Gourmet</a></li>
-    </ul>
+    <a href="#premium e Skimo">Picolé Premium e skimo</a>
+    <a href="#leite">Picolé ao Leite</a>
+    <a href="#fruta">Picolé de Fruta</a>
+    <a href="#zero">Zero Açúcar</a>
+    <a href="#paletas">Paletas</a>
+    <a href="#massa">Massa</a>
+    <a href="#petit">Petit Gateau</a>
+    <a href="#milkshake">Milk-Shake</a>
+    <a href="#Copo Gourmet">Copo Gourmet</a>
+     <a href="#Taça Gourmet">Taça Gourmet</a>
   </nav>
 </header>
-
 <main>
-
   <h2>Conheça nossos sabores incríveis!</h2>
   
   <section id="premium e Skimo">
@@ -997,51 +991,6 @@
 </footer>
 
 <script>
-  class MobileNavbar {
-  constructor(mobileMenu, navList, navLinks) {
-    this.mobileMenu = document.querySelector(mobileMenu);
-    this.navList = document.querySelector(navList);
-    this.navLinks = document.querySelectorAll(navLinks);
-    this.activeClass = "active";
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  animateLinks() {
-    this.navLinks.forEach((link, index) => {
-      link.style.animation
-        ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-            index / 7 + 0.3
-          }s`);
-    });
-  }
-
-  handleClick() {
-    this.navList.classList.toggle(this.activeClass);
-    this.mobileMenu.classList.toggle(this.activeClass);
-    this.animateLinks();
-  }
-
-  addClickEvent() {
-    this.mobileMenu.addEventListener("click", this.handleClick);
-  }
-
-  init() {
-    if (this.mobileMenu) {
-      this.addClickEvent();
-    }
-    return this;
-  }
-}
-
-const mobileNavbar = new MobileNavbar(
-  ".mobile-menu",
-  ".nav-list",
-  ".nav-list li",
-);
-mobileNavbar.init();
-  
   // Função para os botões + e -
   document.querySelectorAll('.card-sabor').forEach(card => {
     const menos = card.querySelector('button:first-of-type');
