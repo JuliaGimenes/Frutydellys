@@ -1,3 +1,4 @@
+/* ==== Estilo geral da página ==== */
 nav a {
       margin-right: 10px;
       text-decoration: none;
@@ -56,7 +57,7 @@ nav a:hover {
   background-color: #a80000;
 }
 
-
+/* ==== Título principal ==== */
 
 h1, h2 {
   color: #d10000;
@@ -86,7 +87,7 @@ section h3 {
 
 /* ==== Estilo dos Cards de Sabores ==== */
 
-
+/* ... seu CSS antigo aqui (body, header, nav, etc) ... */
 
 /* ==== Cards de Sabores ==== */
 .container-cards {
@@ -181,7 +182,6 @@ footer {
 }
 
 /* ==== Responsividade ==== */
-
 
 @media (max-width: 600px) {
   .card-sabor {
