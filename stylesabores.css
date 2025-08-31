@@ -75,8 +75,8 @@ section {
   padding: 20px;
   border-bottom: 1px solid #e0e0e0;
 
-  /* evita que o header fixe cubra a seção ao navegar por âncoras */
-  scroll-margin-top: 180px;
+  /* evita que o header fixo cubra a seção ao navegar por âncoras */
+  scroll-margin-top: 250px;
 }
 
 section h3 {
