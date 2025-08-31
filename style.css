@@ -19,6 +19,7 @@ header {
     padding: 10px;
 }
 
+/* ==== Menu ==== */
 nav ul {
     list-style: none;
     padding: 0;
@@ -47,7 +48,7 @@ nav ul li a:hover {
 
 /* ==== Conteúdo Principal ==== */
 main {
-    padding: 50px 20px 140px; /* espaço maior para o rodapé */
+    padding: 50px 20px 120px; /* espaço maior para o rodapé */
 }
 
 .retangulo-central {
@@ -82,18 +83,18 @@ main {
     box-shadow: 0 0 10px #e60101;
 }
 
-/* ==== Container de Imagens ==== */
+/* ==== Container de imagens lado a lado ==== */
 .container-imagens {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;      /* impede que quebrem linha */
     justify-content: center;
-    gap: 20px; /* espaço entre imagens */
+    gap: 10px;              /* espaçamento entre imagens */
     margin: 20px 0;
 }
 
 .container-imagens img {
-    flex: 1 1 300px; /* encolhe até 300px e cresce conforme o container */
-    max-width: 500px;
+    flex: 1 1 45%;          /* cada imagem ocupa até 45% do container */
+    max-width: 45%;
     height: auto;
     border-radius: 12px;
 }
@@ -124,7 +125,7 @@ footer {
 
 @media (max-width: 768px) {
     main {
-        padding: 40px 15px 120px;
+        padding: 40px 15px 100px;
     }
 
     .retangulo-central {
@@ -143,14 +144,13 @@ footer {
     }
 
     .container-imagens img {
-        max-width: 70%;
-        flex: 1 1 200px;
+        max-width: 45%; /* mantém lado a lado mesmo em telas médias */
     }
 }
 
 @media (max-width: 480px) {
     main {
-        padding: 30px 10px 100px;
+        padding: 30px 10px 90px;
     }
 
     .retangulo-central h2 {
@@ -167,7 +167,6 @@ footer {
     }
 
     .container-imagens img {
-        max-width: 90%;
-        flex: 1 1 150px;
+        max-width: 45%; /* ainda lado a lado */
     }
 }
