@@ -1,16 +1,124 @@
+/* ==== Estilo Geral da Página ==== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: repeating-linear-gradient(
+        to right,
+        red 0px,
+        red 100px,
+        white 100px,
+        white 200px
+    );
+    color: #000;
+    text-align: center;
+}
+
+/* ==== Cabeçalho ==== */
+header {
+    background-color: rgba(241, 7, 7, 0.979);
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #c00;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ee0101;
+    text-shadow: 0 0 6px #f30404;
+}
+
+/* ==== Conteúdo Principal ==== */
+main {
+    padding: 50px 20px 120px; /* espaço maior para o rodapé */
+}
+
+.retangulo-central {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(190, 0, 0, 0.747);
+    text-align: center;
+}
+
+.retangulo-central h2 {
+    font-size: 32px;
+    color: #d00;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #c00;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #e60101;
+    box-shadow: 0 0 10px #e60101;
+}
+
 /* ==== Imagens ==== */
 img {
-    max-width: 100%;
+    max-width: 600px; /* limita imagens em telas grandes */
+    width: 100%;      /* adapta em telas menores */
     height: auto;
     border-radius: 12px;
-    /* Para telas grandes, limitar a largura das imagens */
-    max-width: 600px; 
+    display: block;
+    margin: 20px auto;
+}
+
+/* ==== Rodapé ==== */
+footer {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 /* ==== Responsivo ==== */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
 @media (max-width: 768px) {
-    img {
-        max-width: 80%; /* reduz imagens em tablets e celulares */
+    main {
+        padding: 40px 15px 100px;
     }
 
     .retangulo-central {
@@ -19,42 +127,39 @@ img {
         padding: 15px;
     }
 
-    main {
-        padding: 30px 10px 80px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 1em;
-    }
-
     .retangulo-central h2 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .botao {
         padding: 10px 20px;
         font-size: 0.9em;
     }
+
+    img {
+        max-width: 80%;
+    }
 }
 
-/* Rodapé fixo e ocupando toda a largura */
-footer {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;       /* garante que começa da esquerda */
-    width: 100%;   /* ocupa toda a tela */
-    text-align: center;
-    box-sizing: border-box; /* evita que padding “estoure” a largura */
-    z-index: 1000;
+@media (max-width: 480px) {
+    main {
+        padding: 30px 10px 90px;
+    }
+
+    .retangulo-central h2 {
+        font-size: 22px;
+    }
+
+    .botao {
+        font-size: 0.8em;
+        padding: 8px 18px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    img {
+        max-width: 90%;
+    }
 }
