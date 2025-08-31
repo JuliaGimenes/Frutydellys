@@ -47,7 +47,7 @@ nav ul li a:hover {
 
 /* ==== Conteúdo Principal ==== */
 main {
-    padding: 50px 20px 120px; /* espaço maior para o rodapé */
+    padding: 50px 20px 140px; /* espaço maior para o rodapé */
 }
 
 .retangulo-central {
@@ -82,14 +82,20 @@ main {
     box-shadow: 0 0 10px #e60101;
 }
 
-/* ==== Imagens ==== */
-img {
-    max-width: 600px; /* limita imagens em telas grandes */
-    width: 100%;      /* adapta em telas menores */
+/* ==== Container de Imagens ==== */
+.container-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* espaço entre imagens */
+    margin: 20px 0;
+}
+
+.container-imagens img {
+    flex: 1 1 300px; /* encolhe até 300px e cresce conforme o container */
+    max-width: 500px;
     height: auto;
     border-radius: 12px;
-    display: block;
-    margin: 20px auto;
 }
 
 /* ==== Rodapé ==== */
@@ -118,7 +124,7 @@ footer {
 
 @media (max-width: 768px) {
     main {
-        padding: 40px 15px 100px;
+        padding: 40px 15px 120px;
     }
 
     .retangulo-central {
@@ -136,14 +142,15 @@ footer {
         font-size: 0.9em;
     }
 
-    img {
-        max-width: 80%;
+    .container-imagens img {
+        max-width: 70%;
+        flex: 1 1 200px;
     }
 }
 
 @media (max-width: 480px) {
     main {
-        padding: 30px 10px 90px;
+        padding: 30px 10px 100px;
     }
 
     .retangulo-central h2 {
@@ -159,7 +166,8 @@ footer {
         font-size: 0.9em;
     }
 
-    img {
+    .container-imagens img {
         max-width: 90%;
+        flex: 1 1 150px;
     }
 }
