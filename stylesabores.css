@@ -7,14 +7,13 @@ nav a {
       padding: 8px 12px;
       border-radius: 5px;
     }
-    nav {
+nav {
       background-color: #f44336;
       padding: 10px;
       position: sticky;
       top: 0;
       z-index: 1000;
-    }
-    
+}
 
 body {
   margin: 0;
@@ -25,7 +24,6 @@ body {
 }
 
 /* ==== Cabeçalho e Navegação ==== */
-
 header {
   background-color: rgba(248, 1, 1, 0.9);
   padding: 20px;
@@ -58,7 +56,6 @@ nav a:hover {
 }
 
 /* ==== Título principal ==== */
-
 h1, h2 {
   color: #d10000;
 }
@@ -74,10 +71,12 @@ h2 {
 }
 
 /* ==== Container das seções ==== */
-
 section {
   padding: 20px;
   border-bottom: 1px solid #e0e0e0;
+
+  /* evita que o header fixe cubra a seção ao navegar por âncoras */
+  scroll-margin-top: 180px;
 }
 
 section h3 {
@@ -86,37 +85,35 @@ section h3 {
 }
 
 /* ==== Estilo dos Cards de Sabores ==== */
-
 /* ...  ... */
 
 /* ==== Cards de Sabores ==== */
 .container-cards {
-  display: flex;              /* Faz os cards ficarem lado a lado */
-  flex-wrap: wrap;            /* Permite que quebrem de linha quando necessário */
-  gap: 15px;                  /* Espaçamento entre os cards */
-  justify-content: center; /* Alinha os cards no centro */
+  display: flex;              
+  flex-wrap: wrap;            
+  gap: 15px;                  
+  justify-content: center; 
   padding: 20px;
-  max-width: 1750px;          /* Limita a largura total (ajustável) */
-  margin: 0 auto;             /* Centraliza o container na tela */
+  max-width: 1750px;          
+  margin: 0 auto;             
 }
 
 .card-sabor {
   background-color: #ffffff;
   border: 2px solid #f3c5c5;
   border-radius: 10px;
-  width: 180px;               /* Largura fixa pra caber vários lado a lado */
+  width: 180px;               
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
-  flex-shrink: 0;             /* Garante que eles não encolham demais */
+  flex-shrink: 0;             
 }
 
 .card-sabor:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .card-sabor h4 {
   color: #d10000;
@@ -149,10 +146,9 @@ section h3 {
 }
 
 /* ==== Botão de enviar pedido ==== */
-
 .carrinho {
   display: block;
-  margin: 0;                   /* Remove o margin auto para não centralizar mais */
+  margin: 0;                   
   padding: 12px 25px;
   background-color: green;
   color: white;
@@ -161,11 +157,11 @@ section h3 {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
-  position: fixed;             /* Faz o botão ficar fixo na tela */
-  bottom: 20px;                /* Distância do rodapé */
-  right: 20px;                 /* Distância da lateral direita */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
-  z-index: 1000;               /* Garante que fique sempre na frente de outros elementos */
+  position: fixed;             
+  bottom: 20px;                
+  right: 20px;                 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  z-index: 1000;               
 }
 
 .carrinho:hover {
@@ -173,7 +169,6 @@ section h3 {
 }
 
 /* ==== Rodapé ==== */
-
 footer {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 15px;
@@ -182,7 +177,6 @@ footer {
 }
 
 /* ==== Responsividade ==== */
-
 @media (max-width: 600px) {
   .card-sabor {
     width: 100%;
@@ -218,7 +212,7 @@ footer {
   nav.active {
     display: block;
     position: absolute;
-    top: 100px; /* logo abaixo do header */
+    top: 100px; 
     right: 0;
     width: 100%;
     background-color: #d10000;
