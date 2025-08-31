@@ -994,6 +994,15 @@
 </footer>
 
 <script>
+
+// ==== MENU HAMBURGUER ====
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const nav = document.querySelector('nav');
+
+  mobileMenu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active'); // animação do X
+    nav.classList.toggle('active');        // abre/fecha menu
+  });
   // Função para os botões + e -
   document.querySelectorAll('.card-sabor').forEach(card => {
     const menos = card.querySelector('button:first-of-type');
