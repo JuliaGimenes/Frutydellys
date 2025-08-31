@@ -1002,6 +1002,15 @@
     mobileMenu.classList.toggle('active'); // animação do X
     nav.classList.toggle('active');        // abre/fecha menu
   });
+
+  // Fecha o menu automaticamente ao clicar em um link
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    nav.classList.remove('active');
+  });
+});
+  
   // Função para os botões + e -
   document.querySelectorAll('.card-sabor').forEach(card => {
     const menos = card.querySelector('button:first-of-type');
