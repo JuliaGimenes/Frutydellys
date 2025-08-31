@@ -1,83 +1,27 @@
- body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: repeating-linear-gradient(
-                to right,
-                red 0px,
-                red 100px,
-                white 100px,
-                white 200px
-            );
-            color: #000;
-            text-align: center;
-        }
+/* ==== Estilo Geral da Página ==== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: repeating-linear-gradient(
+        to right,
+        red 0px,
+        red 100px,
+        white 100px,
+        white 200px
+    );
+    color: #000;
+    text-align: center;
+}
 
-        header {
-            background-color: rgba(241, 7, 7, 0.979);
-            padding: 10px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-             margin: 20px 0 0 0;
-    }
-
-        nav ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
-
-       
-        nav ul li a {
-            text-decoration: none;
-            color: #c00;
-            font-weight: bold;
-             transition: color 0.3s, text-shadow 0.3s;
-        }
-         nav ul li a:hover {
-      color: #ee0101;
-      text-shadow: 0 0 6px #f30404;
-    }
-        main {
-            padding: 50px 20px 100px;
-        }
-
-        .retangulo-central {
-      background-color: #ffffff;
+/* ==== Cabeçalho ==== */
+header {
+    background-color: rgba(241, 7, 7, 0.979);
+    padding: 10px;
+}  background-color: #ffffff;
       max-width: 600px;
       margin: 40px auto;
       padding: 20px 20px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(190, 0, 0, 0.747);
-      text-align: center;
-    }
-
-    .retangulo-central h2 {
-      font-size: 32px;
-      color: #d00;
-    }
-
-    .botao {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background-color: #c00;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .botao:hover {
-      background-color: #e60101;
-      box-shadow: 0 0 10px #e60101;
-    }
-        footer {
-    background-color: rgba(255, 255, 255, 0.7); /* cor de fundo semitransparente */
-    padding: 5px;                             /* espaçamento interno  */
-    position: fixed;                           /* fixa o rodapé na tela */
+      bod;                           /* fixa o rodapé na tela */
     width: 100%;                               /* ocupa toda a largura da janela */
     bottom: 0;                                 /* fixa na parte de baixo da tela */
     text-align: center;                        /* centraliza o texto */
@@ -94,3 +38,122 @@
         padding: 20px;
       }
     }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #c00;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ee0101;
+    text-shadow: 0 0 6px #f30404;
+}
+
+/* ==== Conteúdo Principal ==== */
+main {
+    padding: 50px 20px 100px;
+}
+
+.retangulo-central {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(190, 0, 0, 0.747);
+    text-align: center;
+}
+
+.retangulo-central h2 {
+    font-size: 32px;
+    color: #d00;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #c00;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #e60101;
+    box-shadow: 0 0 10px #e60101;
+}
+
+/* ==== Rodapé ==== */
+footer {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+/* ==== Imagens ==== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* ==== Responsivo ==== */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .retangulo-central {
+        max-width: 90%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    .retangulo-central h2 {
+        font-size: 24px;
+    }
+
+    .botao {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 30px 10px 80px;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+}
